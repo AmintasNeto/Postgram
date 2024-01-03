@@ -40,7 +40,7 @@ export async function saveUserToDB(user: {
     username?: string;
 }) {
     try {
-        const newUser = await databases.createDocument(
+        await databases.createDocument(
             appwriteConfig.databaseId,
             appwriteConfig.usersCollectionId,
             ID.unique(),
